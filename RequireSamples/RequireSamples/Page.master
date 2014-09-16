@@ -5,13 +5,29 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head runat="server">
         <title>Require</title>
-        <script src="/scripts/require.js"></script>
+        <script src="/scripts/require.js" data-main="/scripts/main.js"></script>
+        <style>
+            table { width: 100%; }
+            td { vertical-align: top; }
+        </style>
         <asp:ContentPlaceHolder ID="Head" runat="server" />
     </head>
     <body>
         <form id="PageForm" runat="server">
             <div>
-                <asp:ContentPlaceHolder ID="Body" runat="server" />
+                <h1><script>document.write(document.title);</script></h1>
+                <table>
+                    <tr>
+                        <td>
+                            <h2>Test</h2>
+                            <asp:ContentPlaceHolder ID="Body" runat="server" />
+                        </td>
+                        <td style="width: 20%; min-width: 200px;">
+                            <h2>Log</h2>
+                            <div id="log"></div>
+                        </td>
+                    </tr>
+                </table>
             </div>
         </form>
     </body>
