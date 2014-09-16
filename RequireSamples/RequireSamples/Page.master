@@ -5,6 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head runat="server">
         <title>Require</title>
+        <script src="/scripts/require.js"></script>
         <asp:ContentPlaceHolder ID="Head" runat="server" />
     </head>
     <body>
